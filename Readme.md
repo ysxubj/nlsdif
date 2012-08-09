@@ -5,7 +5,7 @@ fitdif.r
 - **License**: [MIT](http://www.opensource.org/licenses/mit-license.php)
 - [Source code on Github](https://github.com/srmulcahy/fitdif)
 
-`fitdif.r` is an R function that performs non-linear least squares fitting of measured diffusion couple profiles using the equation of Crank, 1975.  The function takes as input measured compositions along a traverse, starting values for the upper and lower concentrations and returns best fit values and uncertainties for each parameter and solves for the composite parameter of diffusivity and time (Dt).
+`fitdif.r` is an R function that performs non-linear least squares fitting of measured diffusion couple profiles using the equation of *Crank, 1975*.  The function takes as input measured compositions along a traverse, starting values for the upper and lower concentrations and returns best fit values and uncertainties for each parameter and solves for the composite parameter of diffusivity and time (Dt).
 
 We used a similar approach in the paper by *Renne et al., In Press* to fit Ba diffusion profiles in feldspar in order to model temperature-time histories and argon retention in magmatic phenocrysts.
 
@@ -41,7 +41,7 @@ And plot the fitted diffusion profile:
 ![nls fitted diffusion profile](http://github.com/srmulcahy/fitdif/raw/master/fitdif.png)
 
 
-References:
+References
 -----------
 
 1. Crank, J., 1975. The Mathematics of Diffusion, Oxford, 421 p.
