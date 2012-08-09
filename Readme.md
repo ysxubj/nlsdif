@@ -48,4 +48,4 @@ The function will return the best fit non-linear least squares results:
 
 And plot the fitted diffusion profile:
 
-![nls fitted diffusion profile](https://github.com/srmulcahy/fitdif/fitdif.png)
+![nls fitted diffusion profile](http://github.com/srmulcahy/fitdif/raw/master/fitdif.png)
