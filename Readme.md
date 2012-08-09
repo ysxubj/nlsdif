@@ -44,8 +44,5 @@ And plot the fitted diffusion profile:
 References:
 -----------
 
-1. Crank, J., 1975. The mathematics of diffusion, Oxford, 421 p.
-2. Renne, P.R., Mulcahy, S.R., Morgan, L.E., Cassata, W.S., Kelley, S.P., Hlusko, L., and Njau, J., 
-  Retention of inherited Ar by alkali feldspar xenocrysts in a magma: Kinetic constraints from Ba zoning profiles: 
-  *Geochimica et Cosmochimica Acta*.
-  ([doi](http://dx.doi.org/10.1016/j.gca.2012.06.029))
+1. Crank, J., 1975. The Mathematics of Diffusion, Oxford, 421 p.
+2. Renne, P.R., Mulcahy, S.R., Morgan, L.E., Cassata, W.S., Kelley, S.P., Hlusko, L., and Njau, J., In Press, Retention of inherited Ar by alkali feldspar xenocrysts in a magma: Kinetic constraints from Ba zoning profiles:  *Geochimica et Cosmochimica Acta*. ([doi](http://dx.doi.org/10.1016/j.gca.2012.06.029))
