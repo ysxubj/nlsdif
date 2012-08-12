@@ -21,9 +21,9 @@
 #' @export
 #' @examples
 #' df <- read.table("dataset.csv", header = T, sep = ",")
-#' fitdif(df$x, df$c, df$sd, 0.02, 0.07)
+#' nlsdif(df$x, df$c, df$sd, 0.02, 0.07)
 
-fitdif <- function(x, c, sd, c1, c2, dt = 1, dx = 0){
+nlsdif <- function(x, c, sd, c1, c2, dt = 1, dx = 0){
 	require(ggplot2)
 	
 	# define the error function
@@ -32,7 +32,8 @@ fitdif <- function(x, c, sd, c1, c2, dt = 1, dx = 0){
 	}
 
 	# diffusion couple equation of Crank, 1975
-	fit <- (nls(c ~ 0.5 * (c2 + c1) + 0.5 * (c2 - c1) * erf((x + Dx) / (2 * sqrt(Dt))), data = df, weight = 1 / (sd**2), start = list(c1 = c1, c2 = c2, Dt = dt, Dx = dx)))
+	fit <- (nls(c ~ 0.5 * (c2 + c1) + 0.5 * (c2 - c1) * erf((x + Dx) / (2 * sqrt(Dt))),
+		data = df, weight = 1 / (sd**2), start = list(c1 = c1, c2 = c2, Dt = dt, Dx = dx)))
 
 	# best fit profile
 	df$pr <- predict(fit)
@@ -42,13 +43,10 @@ fitdif <- function(x, c, sd, c1, c2, dt = 1, dx = 0){
 	print(res)
 	
 	# plot data and best fit profile with ggplot2
-	
 	p <- ggplot(df, aes(x, c, ymin = c - sd, ymax = c + sd)) + 
 		geom_errorbar(width = 0, colour = "grey70") +
 		geom_point() + 
 		geom_line(data = df, aes(x = x, y = pr), colour = "red") +
-		#geom_line(data = pr, aes(x = x, y = lwr), colour = "red", lty="dashed") +
-		#geom_line(data = pr, aes(x = x, y = upr), colour = "red", lty="dashed") +
 		labs(x = "Distance", y = "Concentration") + 
 		theme_bw()
 		

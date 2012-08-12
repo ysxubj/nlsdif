@@ -1,11 +1,11 @@
-fitdif.r
+nlsdif.r
 =============
 
 - **Author**: Sean R. Mulcahy
 - **License**: [MIT](http://www.opensource.org/licenses/mit-license.php)
 - [Source code on Github](https://github.com/srmulcahy/fitdif)
 
-`fitdif.r` is an R function that performs non-linear least squares fitting of measured diffusion couple profiles using the equation of *Crank, 1975*.  The function takes as input measured compositions along a traverse, starting values for the upper and lower concentrations and returns best fit values and uncertainties for each parameter and solves for the composite parameter of diffusivity and time (Dt).
+`nlsdif.r` is an R function that performs non-linear least squares fitting of measured diffusion couple profiles using the equation of *Crank, 1975*.  The function takes as input measured compositions along a traverse, starting values for the upper and lower concentrations and returns best fit values and uncertainties for each parameter and solves for the composite parameter of diffusivity and time (Dt).
 
 We used a similar approach in the paper by *Renne et al., In Press* to fit Ba diffusion profiles in feldspar in order to model temperature-time histories and argon retention in magmatic phenocrysts.
 
@@ -13,10 +13,10 @@ We used a similar approach in the paper by *Renne et al., In Press* to fit Ba di
 Quick start
 -----------
 
-Download or fork the `fitdif.r` code and `dataset.csv` file. Set the working directory and within R:
+Download or fork the `nlsdif.r` code and `dataset.csv` file. Set the working directory and within R:
 
 	df <- read.table("dataset.csv", header = T, sep = ",")
-	fitdif(df$x, df$c, df$sd, 0.02, 0.07)
+	nlsdif(df$x, df$c, df$sd, 0.02, 0.07)
 
 The function will return the best fit non-linear least squares results:
 
@@ -38,7 +38,7 @@ The function will return the best fit non-linear least squares results:
 
 And plot the fitted diffusion profile:
 
-![nls fitted diffusion profile](http://github.com/srmulcahy/fitdif/raw/master/fitdif.png)
+![nls fitted diffusion profile](http://github.com/srmulcahy/nlsdif/raw/master/nlsdif.png)
 
 
 References
