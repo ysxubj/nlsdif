@@ -1,4 +1,5 @@
 nlsdif.r
+nlsdif非线性快速拟合包
 =============
 
 - **Author**: Sean R. Mulcahy
